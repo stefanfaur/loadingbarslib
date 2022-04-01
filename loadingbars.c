@@ -67,5 +67,23 @@ void loading_bar_char(int percent, int width, char loading_char)
     fflush(stdout);
 }
 
+void loading_bar_msg(int percent, int width, char loading_char, char* message)
+{
+    int i;
+    int num_of_loaded = (percent * width) / 100;
+    int num_of_empty = width - num_of_loaded;
+    printf("[");
+    for (i = 0; i < num_of_loaded; i++)
+    {
+        printf("%c", loading_char);
+    }
+    for (i = 0; i < num_of_empty; i++)
+    {
+        printf(" ");
+    }
+    printf("] %d%% %s\r", percent, message);
+    fflush(stdout);
+}
+
 
 
