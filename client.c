@@ -6,7 +6,7 @@ void load_with_delay(int num_of_ms)
     int i;
     for (i = 0; i < 100; i++)
     {
-        loading_bar(i, 100);
+        loading_bar_full(i, 100);
         delay(num_of_ms);
     }
 }
